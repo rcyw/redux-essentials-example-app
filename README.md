@@ -1,3 +1,3 @@
 # README
 
-https://redux.js.org/tutorials/essentials/part-2-app-structure
+https://redux.js.org/tutorials/essentials/part-3-data-flow
