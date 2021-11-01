@@ -22,6 +22,7 @@ export const slice = createSlice({
   },
 });
 
+// The function below is action createor，called return action object。
 export const { increment, decrement, incrementByAmount } = slice.actions;
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -40,3 +41,10 @@ export const incrementAsync = amount => dispatch => {
 export const selectCount = state => state.counter.value;
 
 export default slice.reducer;
+
+
+console.log({
+  increment: increment(),
+  decrement: decrement(),
+  incrementByAmount: incrementByAmount(1)
+})
