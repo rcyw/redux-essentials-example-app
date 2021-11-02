@@ -80,10 +80,3 @@ export const selectPostsByUser = createSelector(
   [selectAllPosts, (state, userId) => userId],
   (posts, userId) => posts.filter((post) => post.user === userId)
 )
-
-// https://redux.js.org/tutorials/essentials/part-6-performance-normalization#memoizing-selector-functions
-// 这个会导致多次的 render，可以在 UserPage 的时候点击 Refresh Notifications，即使 UserPage 没有变化，但是 UserPage 还是被 re-render
-// export const selectPostsByUser = (state, userId) => {
-//   const allPosts = selectAllPosts(state)
-//   return allPosts.filter((post) => post.user === userId)
-// }
